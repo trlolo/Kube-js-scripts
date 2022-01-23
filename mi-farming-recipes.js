@@ -527,36 +527,4 @@ onEvent('recipes', (event) => {
     }
   ]
 })
- event.custom({
-  "id":"log_pyrolysis",
-  "type": "modern_industrialization:blast_furnace",
-  "eu": 32,
-  "duration": 450,
-  "item_inputs": {
-      "tag": "minecraft:logs",
-      "amount": 3
-    },
-  "item_outputs": {
-      "item": "modern_industrialization:carbon_dust",
-      "amount": 1
-    },
-  "fluid_outputs" : {
-    "fluid" : "minecraft:water",
-    "amount" : 1500
-  }
- })
- event.custom({
-  "id":"kelp_pyrolysis_oil",
-  "type": "modern_industrialization:blast_furnace",
-  "eu": 32,
-  "duration": 600,
-  "item_inputs": {
-      "item": "minecraft:kelp",
-      "amount": 20
-    },
-  "fluid_outputs" : {
-    "fluid" : "modern_industrialization:crude_oil",
-    "amount" : 1000
-  }
- })
 })
