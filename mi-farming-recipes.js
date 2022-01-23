@@ -125,7 +125,7 @@ onEvent('recipes', (event) => {
   "item_outputs": [
     {
       "item": "minecraft:acacia_log",
-      "amount": 7
+      "amount": 8
     },
     {
       "item": "minecraft:acacia_sapling",
@@ -167,7 +167,7 @@ onEvent('recipes', (event) => {
   "item_outputs": [
     {
       "item": "minecraft:birch_log",
-      "amount": 5
+      "amount": 6
     },
     {
       "item": "minecraft:birch_sapling",
@@ -251,7 +251,7 @@ onEvent('recipes', (event) => {
   "item_outputs": [
     {
       "item": "minecraft:jungle_log",
-      "amount": 7
+      "amount": 9
     },
     {
       "item": "minecraft:jungle_sapling",
