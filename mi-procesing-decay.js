@@ -4,11 +4,18 @@ onEvent('recipes', (event) => {
   "type": "modern_industrialization:chemical_reactor",
   "eu": 1,
   "duration": 75000,
-  "item_inputs":{
+  "item_inputs":[
+    {
       "item": "modern_industrialization:plutonium_block",
       "amount": 1,
       "probability" : 0.0
     },
+	{
+      "item": "modern_industrialization:uranium_235_block",
+      "amount": 1,
+      "probability" : 0.0
+    }
+],
   "fluid_inputs":{
       "fluid": "modern_industrialization:tritium",
       "amount": 12000
