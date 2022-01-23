@@ -1,11 +1,10 @@
-
 onEvent('recipes', (event) => {
     const id = [
     'techreborn:blast_furnace/iron_ingot_from_rail',
     'techreborn:blast_furnace/iron_ingot_from_minecart',
-	'techreborn:industrial_grinder/copper_ingot_with_mercury',
-	'techreborn:industrial_grinder/iron_ingot_with_mercury',
-	'techreborn:industrial_grinder/gold_ingot_with_mercury',
+    'techreborn:industrial_grinder/copper_ingot_with_mercury',
+    'techreborn:industrial_grinder/iron_ingot_with_mercury',
+    'techreborn:industrial_grinder/gold_ingot_with_mercury',
     ];
     id.forEach((id) => {
         event.remove({ id: id });
@@ -58,5 +57,4 @@ onEvent('recipes', (event) => {
     }
   ]
 })
-
 })
