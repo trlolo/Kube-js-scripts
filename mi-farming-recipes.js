@@ -345,8 +345,8 @@ onEvent('recipes', (event) => {
  event.custom({
   "id":"melon_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 24,
-  "duration": 850,
+  "eu": 8,
+  "duration": 1000,
   "item_inputs": [
     {
       "item": "minecraft:melon_seeds",
@@ -382,8 +382,8 @@ onEvent('recipes', (event) => {
  event.custom({
   "id":"pumpkin_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 24,
-  "duration": 850,
+  "eu": 8,
+  "duration": 1000,
   "item_inputs": [
     {
       "item": "minecraft:pumpkin_seeds",
@@ -419,7 +419,7 @@ onEvent('recipes', (event) => {
  event.custom({
   "id":"sugar_cane_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 8,
+  "eu": 16,
   "duration": 650,
   "item_inputs": [
     {
@@ -456,8 +456,8 @@ onEvent('recipes', (event) => {
  event.custom({
   "id":"bamboo_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 12,
-  "duration": 300,
+  "eu": 24,
+  "duration": 400,
   "item_inputs": [
     {
       "item": "minecraft:bamboo",
@@ -524,6 +524,43 @@ onEvent('recipes', (event) => {
     {
       "item": "minecraft:kelp",
       "amount": 10
+    }
+  ]
+})
+ event.custom({
+  "id":"cactus_farming",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 8,
+  "duration": 600,
+  "item_inputs": [
+    {
+      "item": "minecraft:cactus",
+      "amount": 4,
+      "probability" : 0.0
+    },
+    {
+      "item": "minecraft:dirt",
+      "amount": 1,
+    },
+    {
+      "item": "modern_industrialization:carbon_dust",
+      "amount": 4
+    }
+  ],
+  "fluid_inputs": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 4000
+    },
+    {
+      "fluid": "modern_industrialization:oxygen",
+      "amount": 8000
+    }
+  ],
+  "item_outputs": [
+    {
+      "item": "cactus",
+      "amount": 4
     }
   ]
 })

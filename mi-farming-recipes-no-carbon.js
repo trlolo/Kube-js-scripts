@@ -20,12 +20,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:dark_oak_log",
@@ -63,12 +61,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 2000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:oak_log",
@@ -107,12 +103,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 2000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:acacia_log",
@@ -146,12 +140,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 2000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:birch_log",
@@ -185,12 +177,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:spruce_log",
@@ -224,12 +214,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 2000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:jungle_log",
@@ -263,12 +251,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 6000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:wheat",
@@ -301,12 +287,10 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
+    },
   "item_outputs": [
     {
       "item": "minecraft:beetroot",
@@ -321,8 +305,8 @@ onEvent('recipes', (event) => {
  event.custom({
   "id":"melon_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 12,
-  "duration": 2200,
+  "eu": 4,
+  "duration": 2500,
   "item_inputs": [
     {
       "item": "minecraft:melon_seeds",
@@ -339,24 +323,20 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
-  "item_outputs": [
-    {
+    },
+  "item_outputs": {
       "item": "minecraft:melon",
       "amount": 4
     }
-  ]
 })
  event.custom({
   "id":"pumpkin_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 12,
-  "duration": 2200,
+  "eu": 4,
+  "duration": 2500,
   "item_inputs": [
     {
       "item": "minecraft:pumpkin_seeds",
@@ -373,23 +353,19 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
-  "item_outputs": [
-    {
+    },
+  "item_outputs": {
       "item": "minecraft:pumpkin",
       "amount": 4
     }
-  ]
 })
  event.custom({
   "id":"sugar_cane_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 4,
+  "eu": 8,
   "duration": 1700,
   "item_inputs": [
     {
@@ -407,24 +383,20 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
-  "item_outputs": [
-    {
+    },
+  "item_outputs": {
       "item": "minecraft:sugar_cane",
       "amount": 8
     }
-  ]
 })
  event.custom({
   "id":"bamboo_farming",
   "type": "modern_industrialization:chemical_reactor",
-  "eu": 6,
-  "duration": 750,
+  "eu": 12,
+  "duration": 1000,
   "item_inputs": [
     {
       "item": "minecraft:bamboo",
@@ -441,18 +413,14 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 8000
-    }
-  ],
-  "item_outputs": [
-    {
+    },
+  "item_outputs": {
       "item": "minecraft:bamboo",
       "amount": 64
     }
-  ]
 })
  event.custom({
   "id":"kelp_farming",
@@ -475,17 +443,43 @@ onEvent('recipes', (event) => {
       "probability" : 0.0
     }
   ],
-  "fluid_inputs": [
-    {
+  "fluid_inputs": {
       "fluid": "minecraft:water",
       "amount": 16000
-    }
-  ],
-  "item_outputs": [
-    {
+    },
+  "item_outputs": {
       "item": "minecraft:kelp",
       "amount": 10
     }
-  ]
+})
+ event.custom({
+  "id":"cactus_farming",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 4,
+  "duration": 1500,
+  "item_inputs": [
+    {
+      "item": "minecraft:cactus",
+      "amount": 4,
+      "probability" : 0.0
+    },
+    {
+      "item": "minecraft:dirt",
+      "amount": 1,
+    },
+    {
+      "item": "modern_industrialization:air_intake",
+      "amount": 1,
+      "probability" : 0.0
+    }
+  ],
+  "fluid_inputs": {
+      "fluid": "minecraft:water",
+      "amount": 4000
+    },
+  "item_outputs": {
+      "item": "cactus",
+      "amount": 4
+    }
 })
 })
