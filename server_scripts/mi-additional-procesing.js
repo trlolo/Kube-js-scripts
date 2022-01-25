@@ -38,8 +38,7 @@ onEvent('recipes', (event) => {
     },
   "fluid_inputs": {
       "fluid": "minecraft:water",
-      "amount": 8000,
-	  "probability" : 0.05
+      "amount": 500
     },
   "item_outputs": [
   {
@@ -260,8 +259,7 @@ onEvent('recipes', (event) => {
     },
   "fluid_inputs": {
       "fluid": "minecraft:water",
-      "amount": 8000,
-	  "probability" : 0.05
+      "amount": 400
     },
   "item_outputs": [
   {
@@ -269,9 +267,14 @@ onEvent('recipes', (event) => {
       "amount": 1
   },
   {
+      "item": "kubejs:pure_copper_chloride",
+      "amount": 1,
+	  "probability" : 0.1
+  },
+  {
       "item": "kubejs:silver_chloride",
       "amount": 1,
-	  "probability" : 0.5
+	  "probability" : 0.3
   }
 ]
 })
