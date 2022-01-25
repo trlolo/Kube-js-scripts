@@ -1,0 +1,2 @@
+impure_copper_chloride.png, impure_copper_ntrate.png, impure_uranium_sulfate.png, lead_sulfate.png, lead_sulfide.png, pure_copper_chloride.png, pure_uranium_sulfate.png, silver_chloride.png and uranium_trioxide.png 
+are derivatives from dust.png that was used from https://github.com/AztechMC/Modern-Industrialization by cc0 license
