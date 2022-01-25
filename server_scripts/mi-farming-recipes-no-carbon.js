@@ -512,4 +512,34 @@ onEvent('recipes', (event) => {
       "amount": 14
     }
 })
+ event.custom({
+  "id":"brown_mushroom_farming",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 6,
+  "duration": 2500,
+  "item_inputs": [
+    {
+      "item": "minecraft:brown_mushroom",
+      "amount": 1,
+      "probability" : 0.0
+    },
+    {
+      "item": "minecraft:dirt",
+      "amount": 1,
+    },
+    {
+      "item": "modern_industrialization:air_intake",
+      "amount": 1,
+      "probability" : 0.0
+    }
+  ],
+  "fluid_inputs": {
+      "fluid": "minecraft:water",
+      "amount": 12000
+    },
+  "item_outputs": {
+      "item": "minecraft:brown_mushroom",
+      "amount": 15
+    }
+})
 })

@@ -372,12 +372,10 @@ onEvent('recipes', (event) => {
       "amount": 8000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:melon",
       "amount": 4
     }
-  ]
 })
  event.custom({
   "id":"pumpkin_farming",
@@ -409,12 +407,10 @@ onEvent('recipes', (event) => {
       "amount": 8000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:pumpkin",
       "amount": 4
-    }
-  ]
+    ]
 })
  event.custom({
   "id":"sugar_cane_farming",
@@ -446,12 +442,10 @@ onEvent('recipes', (event) => {
       "amount": 8000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:sugar_cane",
       "amount": 8
     }
-  ]
 })
  event.custom({
   "id":"bamboo_farming",
@@ -483,12 +477,10 @@ onEvent('recipes', (event) => {
       "amount": 16000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:bamboo",
       "amount": 64
     }
-  ]
 })
  event.custom({
   "id":"kelp_farming",
@@ -520,12 +512,10 @@ onEvent('recipes', (event) => {
       "amount": 8000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:kelp",
       "amount": 10
     }
-  ]
 })
  event.custom({
   "id":"cactus_farming",
@@ -557,12 +547,10 @@ onEvent('recipes', (event) => {
       "amount": 8000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:cactus",
       "amount": 4
     }
-  ]
 })
  event.custom({
   "id":"red_mushroom_farming",
@@ -594,11 +582,44 @@ onEvent('recipes', (event) => {
       "amount": 8000
     }
   ],
-  "item_outputs": [
-    {
+  "item_outputs": {
       "item": "minecraft:red_mushroom",
       "amount": 14
     }
-  ]
+})
+ event.custom({
+  "id":"red_mushroom_farming",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 12,
+  "duration": 1000,
+  "item_inputs": [
+    {
+      "item": "minecraft:brown_mushroom",
+      "amount": 1,
+      "probability" : 0.0
+    },
+    {
+      "item": "minecraft:dirt",
+      "amount": 1,
+    },
+    {
+      "item": "modern_industrialization:carbon_dust",
+      "amount": 4
+    }
+  ],
+  "fluid_inputs": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 12000
+    },
+    {
+      "fluid": "modern_industrialization:oxygen",
+      "amount": 8000
+    }
+  ],
+  "item_outputs": {
+      "item": "minecraft:brown_mushroom",
+      "amount": 15
+    }
 })
 })
