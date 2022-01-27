@@ -792,4 +792,102 @@ onEvent('recipes', (event) => {
     "amount" : 1000
   }
 })
+ event.custom({
+  "id":"titanium_disolution",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 16,
+  "duration": 1600,
+  "item_inputs": [
+    {
+      "item": "modern_industrialization:raw_titanium",
+      "amount": 1
+    },
+    {
+      "item": "modern_industrialization:carbon_dust",
+      "amount": 9
+    },
+    {
+      "item": "kubejs:inert_cell",
+      "amount": 12
+    }
+],
+  "fluid_inputs": {
+      "fluid": "modern_industrialization:chlorine",
+      "amount": 9000
+    },
+  "item_outputs": [
+  {
+      "item": "kubejs:titanium_chloride_cell",
+      "amount": 3
+  },
+  {
+      "item": "kubejs:iron_chloride",
+      "amount": 2
+  },
+  {
+      "item": "kubejs:carbon_mono_oxide_cell",
+      "amount": 9
+  }
+]
+})
+ event.custom({
+  "id":"titanium_chloride_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 16,
+  "duration": 1200,
+  "item_inputs": {
+      "item": "kubejs:titanium_chloride_cell",
+      "amount": 1
+  },
+  "item_outputs": {
+      "item": "modern_industrialization:titanium_dust",
+      "amount": 1
+  },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:chlorine",
+    "amount" : 2000
+  }
+})
+ event.custom({
+  "id":"iron_chloride_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 16,
+  "duration": 600,
+  "item_inputs": {
+      "item": "kubejs:iron_chloride",
+      "amount": 1
+  },
+  "item_outputs": {
+      "item": "modern_industrialization:iron_dust",
+      "amount": 2
+  },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:chlorine",
+    "amount" : 1500
+  }
+})
+ event.custom({
+  "id":"carbon_mono_oxide_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 16,
+  "duration": 500,
+  "item_inputs": {
+      "item": "kubejs:carbon_mono_oxide_cell",
+      "amount": 1
+  },
+  "item_outputs": [
+  {
+      "item": "kubejs:inert_cell",
+      "amount": 1
+  },
+  {
+      "item": "modern_industrialization:carbon_dust",
+      "amount": 1
+  }
+],
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:oxygen",
+    "amount" : 500
+  }
+})
 })
