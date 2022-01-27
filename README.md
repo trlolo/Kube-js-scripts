@@ -1,4 +1,4 @@
-mi-additional-procesing For now adds new way of procesing uranium, gold, iron and copper, Needs mi-additional-procesing-items to work
+mi-additional-procesing For now adds new way of procesing uranium, gold, titanium, iron and copper, Needs mi-additional-procesing-items to work
 mi-farming-for-fun "Fun" recipes for chemecal reactor,
 mi-farming-procesing Procesing recipes for now only for electric blast furnace,
 mi-farming-recipes Add crop and tree "farming" in chemecal reactor,
