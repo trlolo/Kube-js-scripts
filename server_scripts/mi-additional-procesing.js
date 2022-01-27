@@ -15,7 +15,7 @@ onEvent('recipes', (event) => {
     },
     {
       "fluid": "modern_industrialization:oxygen",
-      "amount": 10000
+      "amount": 7000
     }
   ],
   "item_outputs": {
@@ -89,7 +89,7 @@ onEvent('recipes', (event) => {
   },
   "fluid_outputs" : {
     "fluid" : "modern_industrialization:oxygen",
-    "amount" : 3000
+    "amount" : 1500
   }
 })
  event.custom({
@@ -107,7 +107,7 @@ onEvent('recipes', (event) => {
   },
   "fluid_outputs" : {
     "fluid" : "modern_industrialization:oxygen",
-    "amount" : 4000
+    "amount" : 2000
   }
 })
  event.custom({
@@ -396,7 +396,7 @@ onEvent('recipes', (event) => {
     "fluid" : "modern_industrialization:chlorine",
     "amount" : 1000
   }
- })
+})
  event.custom({
   "id":"gold_chloride_purification",
   "type": "modern_industrialization:centrifuge",
@@ -521,6 +521,275 @@ onEvent('recipes', (event) => {
   "fluid_outputs" : {
     "fluid" : "modern_industrialization:chlorine",
     "amount" : 2000
+  }
+})
+ event.custom({
+  "id":"iron_oxidation",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 8,
+  "duration": 1000,
+  "item_inputs": {
+      "item": "minecraft:raw_iron",
+      "amount": 1
+    },
+  "fluid_inputs": {
+      "fluid": "modern_industrialization:oxygen",
+      "amount": 2000
+  },
+  "item_outputs": {
+      "item": "kubejs:impure_iron_like_metals_oxide",
+      "amount": 1
+  }
+})
+ event.custom({
+  "id":"magnetic_iron_oxide_purification",
+  "type": "modern_industrialization:mixer",
+  "eu": 8,
+  "duration": 500,
+  "item_inputs": [
+    {
+      "item": "kubejs:impure_iron_like_metals_oxide",
+      "amount": 1
+    },
+    {
+      "item": "modern_industrialization:steel_rod_magnetic",
+      "amount": 1,
+	  "probability" : 0.0
+    }
+],
+  "item_outputs": [
+  {
+      "item": "kubejs:iron_oxide",
+      "amount": 1
+  },
+  {
+      "item": "kubejs:impure_manganese_like_metals_oxide",
+      "amount": 1,
+	  "probability" : 0.1
+  }
+]
+})
+ event.custom({
+  "id":"iron_oxide_redusing",
+  "type": "modern_industrialization:blast_furnace",
+  "eu": 16,
+  "duration": 500,
+  "item_inputs": [
+    {
+      "item": "kubejs:iron_oxide",
+      "amount": 1
+    },
+    {
+      "item": "minecraft:charcoal",
+      "amount": 3
+    }
+],
+  "item_outputs": {
+      "item": "modern_industrialization:iron_dust",
+      "amount": 2
+    }
+})
+ event.custom({
+  "id":"iron_oxide_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 16,
+  "duration": 1600,
+  "item_inputs": {
+      "item": "kubejs:iron_oxide",
+      "amount": 1
+  },
+  "item_outputs": {
+      "item": "modern_industrialization:iron_dust",
+      "amount": 2
+  },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:oxygen",
+    "amount" : 1500
+  }
+})
+ event.custom({
+  "id":"crucible_cutting",
+  "type": "modern_industrialization:cutting_machine",
+  "eu": 8,
+  "duration": 600,
+  "item_inputs": {
+      "item": "modern_industrialization:fire_clay_bricks",
+      "amount": 1
+  },
+  "fluid_inputs": {
+      "fluid": "modern_industrialization:lubricant",
+      "amount": 100
+  },
+  "item_outputs": {
+      "item": "kubejs:heatproof_crucible",
+      "amount": 1
+  }
+})
+ event.custom({
+  "id":"manganese_like_exhange",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 8,
+  "duration": 600,
+  "item_inputs": {
+      "item": "kubejs:impure_manganese_like_metals_oxide",
+      "amount": 1
+    },
+  "fluid_inputs": {
+      "fluid": "modern_industrialization:hydrochloric_acid",
+      "amount": 18000
+  },
+  "item_outputs": {
+      "item": "kubejs:impure_manganese_like_metals_chloride",
+      "amount": 1
+  },
+  "fluid_outputs" : {
+    "fluid" : "minecraft:water",
+    "amount" : 9000
+  }
+})
+ event.custom({
+  "id":"crucible_filling_manganese",
+  "type": "modern_industrialization:packer",
+  "eu": 4,
+  "duration": 100,
+  "item_inputs": [
+    {
+      "item": "kubejs:heatproof_crucible",
+      "amount": 1
+    },
+	{
+      "item": "kubejs:impure_manganese_like_metals_chloride",
+      "amount": 1
+    }
+],
+  "item_outputs": {
+      "item": "kubejs:cold_manganese_like_crucible",
+      "amount": 1
+    }
+})
+ event.custom({
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "kubejs:cold_manganese_like_crucible"
+  },
+  "result": "kubejs:hot_manganese_like_crucible",
+  "cookingtime": 1000
+})
+ event.custom({
+  "id":"hot_manganese_seperation",
+  "type": "modern_industrialization:centrifuge",
+  "eu": 8,
+  "duration": 200,
+  "item_inputs": 
+    {
+      "item": "kubejs:hot_manganese_like_crucible",
+      "amount": 1
+    },
+  "fluid_inputs": {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    },
+  "item_outputs": [
+    {
+      "item": "kubejs:cold_nickel_like_crucible",
+      "amount": 1
+    },
+    {
+      "item": "kubejs:manganese_chloride",
+      "amount": 4
+    }
+]
+})
+ event.custom({
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "kubejs:cold_nickel_like_crucible"
+  },
+  "result": "kubejs:hot_nickel_like_crucible",
+  "cookingtime": 2000
+})
+ event.custom({
+  "id":"hot_nickel_seperation",
+  "type": "modern_industrialization:centrifuge",
+  "eu": 8,
+  "duration": 300,
+  "item_inputs": 
+    {
+      "item": "kubejs:hot_nickel_like_crucible",
+      "amount": 1
+    },
+  "fluid_inputs": {
+      "fluid": "minecraft:water",
+      "amount": 2000
+    },
+  "item_outputs": [
+    {
+      "item": "kubejs:heatproof_crucible",
+      "amount": 1,
+	  "probability" : 0.95
+    },
+    {
+      "item": "kubejs:nickel_chloride",
+      "amount": 2
+    },
+    {
+      "item": "kubejs:chromium_chloride",
+      "amount": 2
+    }
+]
+})
+ event.custom({
+  "id":"manganese_chloride_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 16,
+  "duration": 1000,
+  "item_inputs": {
+      "item": "kubejs:manganese_chloride",
+      "amount": 1
+  },
+  "item_outputs": {
+      "item": "modern_industrialization:manganese_dust",
+      "amount": 1
+  },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:chlorine",
+    "amount" : 1000
+  }
+})
+ event.custom({
+  "id":"chromium_chloride_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 24,
+  "duration": 1200,
+  "item_inputs": {
+      "item": "kubejs:chromium_chloride",
+      "amount": 1
+  },
+  "item_outputs": {
+      "item": "modern_industrialization:chromium_dust",
+      "amount": 1
+  },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:chlorine",
+    "amount" : 1500
+  }
+})
+ event.custom({
+  "id":"nickel_chloride_electrolysis",
+  "type": "modern_industrialization:electrolyzer",
+  "eu": 16,
+  "duration": 800,
+  "item_inputs": {
+      "item": "kubejs:nickel_chloride",
+      "amount": 1
+  },
+  "item_outputs": {
+      "item": "modern_industrialization:nickel_dust",
+      "amount": 1
+  },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:chlorine",
+    "amount" : 1000
   }
 })
 })
