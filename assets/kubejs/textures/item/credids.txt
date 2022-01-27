@@ -1,2 +1,4 @@
-fired_iridium_chloride.png, fired_precious_metals_chloride.png, gold_chloride.png, impure_copper_chloride.png, impure_copper_nitrate.png, impure_iridium_chloride.png, impure_precious_metals_chloride.png, impure_uranium_sulfate.png, lead_sulfate.png, lead_sulfide.png, platinum_chloride.png, pure_copper_chloride.png, pure_iridium_chloride.png, pure_precious_metals_chloride.png, pure_uranium_sulfate.png, silver_chloride.png and uranium_trioxide.png 
+fired_iridium_chloride.png, fired_precious_metals_chloride.png, gold_chloride.png, impure_copper_chloride.png, impure_copper_nitrate.png, impure_iridium_chloride.png, 
+impure_precious_metals_chloride.png, impure_uranium_sulfate.png, lead_sulfate.png, lead_sulfide.png, platinum_chloride.png, pure_copper_chloride.png,
+pure_iridium_chloride.png, pure_precious_metals_chloride.png, pure_uranium_sulfate.png and uranium_trioxide.png 
 are derivatives from dust.png that was used from https://github.com/AztechMC/Modern-Industrialization by cc0 license
