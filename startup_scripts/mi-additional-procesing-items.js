@@ -30,4 +30,7 @@ onEvent('item.registry', event => {
   event.create('hot_nickel_like_crucible', item => item.displayName('Hot Crucible Whin Nickel Like Metals Chloride')) 
   event.create('nickel_chloride', item => item.displayName('Nickel Chloride'))
   event.create('chromium_chloride', item => item.displayName('Chromium Chloride'))
+  event.create('iron_chloride', item => item.displayName('Iron Chloride'))
+  event.create('titanium_chloride_cell', item => item.displayName('Cell Whin Titanium Chloride'))
+  event.create('carbon_mono_oxide_cell', item => item.displayName('Cell Whin Carbon Mono Oxide'))
 })
