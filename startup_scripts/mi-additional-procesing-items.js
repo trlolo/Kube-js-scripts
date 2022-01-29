@@ -33,4 +33,7 @@ onEvent('item.registry', event => {
   event.create('iron_chloride', item => item.displayName('Iron Chloride'))
   event.create('titanium_chloride_cell', item => item.displayName('Cell Whin Titanium Chloride'))
   event.create('carbon_mono_oxide_cell', item => item.displayName('Cell Whin Carbon Mono Oxide'))
+  event.create('impure_copper_like_metals_chloride', item => item.displayName('Impure Copper Like Metals Chloride'))
+  event.create('pure_cuprogold_chloride', item => item.displayName('Pure Cupro-Gold Chloride'))
+  event.create('fired_cuprogold_chloride', item => item.displayName('Fired Cupro-Gold Chloride'))
 })
