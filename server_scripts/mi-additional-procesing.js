@@ -193,6 +193,11 @@ onEvent('recipes', (event) => {
       "amount": 1
     },
     {
+      "item": "modern_industrialization:analog_circuit",
+      "amount": 1,
+	  "probability" : 0.0
+    },
+    {
       "item": "kubejs:nitric_acid_cell",
       "amount": 6
     }
@@ -870,7 +875,7 @@ onEvent('recipes', (event) => {
   "id":"carbon_mono_oxide_electrolysis",
   "type": "modern_industrialization:electrolyzer",
   "eu": 16,
-  "duration": 500,
+  "duration": 800,
   "item_inputs": {
       "item": "kubejs:carbon_mono_oxide_cell",
       "amount": 1
@@ -889,5 +894,127 @@ onEvent('recipes', (event) => {
     "fluid" : "modern_industrialization:oxygen",
     "amount" : 500
   }
+})
+ event.custom({
+  "id":"aqua_regia_copper_disolition",
+  "type": "modern_industrialization:chemical_reactor",
+  "eu": 16,
+  "duration": 1000,
+  "item_inputs": [
+    {
+      "item": "minecraft:raw_copper",
+      "amount": 1
+    },
+    {
+      "item": "kubejs:nitric_acid_cell",
+      "amount": 2
+    },
+    {
+      "item": "modern_industrialization:electronic_circuit",
+      "amount": 1,
+	  "probability" : 0.0
+    }
+],
+  "fluid_inputs": {
+      "fluid": "modern_industrialization:hydrochloric_acid",
+      "amount": 10000
+  },
+  "item_outputs": [
+  {
+      "item": "kubejs:impure_copper_like_metals_chloride",
+      "amount": 1
+  },
+  {
+      "item": "kubejs:inert_cell",
+      "amount": 2
+  }
+],
+  "fluid_outputs" : [
+  {
+    "fluid" : "minecraft:water",
+    "amount" : 6000
+  },
+  {
+    "fluid" : "modern_industrialization:nitrogen",
+    "amount" : 1000
+  }
+]
+})
+ event.custom({
+  "id":"copper_like_metals_chloride_purification",
+  "type": "modern_industrialization:centrifuge",
+  "eu": 8,
+  "duration": 500,
+  "item_inputs": {
+      "item": "kubejs:impure_copper_like_metals_chloride",
+      "amount": 1
+    },
+  "fluid_inputs": {
+      "fluid": "minecraft:water",
+      "amount": 500
+    },
+  "item_outputs": [
+  {
+      "item": "kubejs:pure_cuprogold_chloride",
+      "amount": 1
+  },
+  {
+      "item": "kubejs:silver_chloride",
+      "amount": 1,
+  },
+  {
+      "item": "kubejs:silver_chloride",
+      "amount": 1,
+	  "probability" : 0.1
+  }
+]
+})
+ event.custom({
+  "id":"cuprogold_chloride_heating",
+  "type": "modern_industrialization:blast_furnace",
+  "eu": 16,
+  "duration": 400,
+  "item_inputs": {
+      "item": "kubejs:pure_cuprogold_chloride",
+      "amount": 1
+    },
+  "item_outputs": {
+      "item": "kubejs:fired_cuprogold_chloride",
+      "amount": 1
+    },
+  "fluid_outputs" : {
+    "fluid" : "modern_industrialization:chlorine",
+    "amount" : 500
+  }
+})
+ event.custom({
+  "id":"cuprogold_chloride_purification",
+  "type": "modern_industrialization:centrifuge",
+  "eu": 8,
+  "duration": 1000,
+  "item_inputs": {
+      "item": "kubejs:fired_cuprogold_chloride",
+      "amount": 1
+    },
+  "fluid_inputs": {
+      "fluid": "minecraft:water",
+      "amount": 500
+    },
+  "item_outputs": [
+  {
+      "item": "kubejs:pure_copper_chloride",
+      "amount": 3
+  },
+  {
+      "item": "kubejs:pure_copper_chloride",
+      "amount": 1,
+	  "probability" : 0.7
+  },
+  {
+      "item": "kubejs:gold_chloride",
+      "amount": 1,
+	  "probability" : 0.5
+  }
+]
 })
 })
